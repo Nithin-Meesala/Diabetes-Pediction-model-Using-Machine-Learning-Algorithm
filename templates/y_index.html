@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url("/static/niti.jpg");
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            margin: 30px 0;
+        }
+        form {
+            background: #fff;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+        
+        div{
+            background-color: white;
+            
+        
+        
+        
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Diabetes Prediction</h1>
+    </div>
+    
+    <form method="POST" action="/predict">
+        <label for="pregnancies">Number of Pregnancies:</label>
+        <input type="text" name="pregnancies" required>
+
+        <label for="glucose">Glucose Level:</label>
+        <input type="text" name="glucose" required>
+
+        <label for="blood_pressure">Blood Pressure:</label>
+        <input type="text" name="blood_pressure" required>
+
+        <label for="skin_thickness">Skin Thickness:</label>
+        <input type="text" name="skin_thickness" required>
+
+        <label for="insulin">Insulin Level:</label>
+        <input type="text" name="insulin" required>
+
+        <label for="bmi">BMI:</label>
+        <input type="text" name="bmi" required>
+
+        <label for="diabetes_pedigree">Diabetes Pedigree Function:</label>
+        <input type="text" name="diabetes_pedigree" required>
+
+        <label for="age">Age:</label>
+        <input type="text" name="age" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
